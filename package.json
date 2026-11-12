@@ -1,0 +1,59 @@
+{
+  "name": "@ploutosservices/page-recorder",
+  "version": "0.1.0",
+  "description": "Record what every kind of user sees and writes in a web application — every page and every action, as every role, on a fixed copy of the database — and compare two versions of the code by hash.",
+  "license": "Apache-2.0",
+  "author": "Ploutos Services",
+  "type": "module",
+  "bin": {
+    "page-recorder": "bin/page-recorder.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./src/index.mjs"
+    }
+  },
+  "types": "./index.d.ts",
+  "files": [
+    "bin",
+    "src",
+    "index.d.ts",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22.17"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "check-addresses": "source-gates addresses"
+  },
+  "peerDependencies": {
+    "pg": ">=8",
+    "playwright-core": ">=1.40"
+  },
+  "devDependencies": {
+    "@ploutosservices/source-gates": "0.3.0",
+    "pg": "8.23.0",
+    "playwright-core": "1.64.1"
+  },
+  "keywords": [
+    "regression",
+    "snapshot",
+    "playwright",
+    "postgres",
+    "nextjs",
+    "rbac",
+    "testing",
+    "replay"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ploutosservices/page-recorder.git"
+  }
+}
